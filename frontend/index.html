@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KisanLink | Farmer Market Intelligence</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="brand">
+            <span class="logo">🌾</span>
+
+            <div>
+                <h1>KisanLink</h1>
+                <p>Farmer Market Intelligence</p>
+            </div>
+        </div>
+
+        <div class="status">
+            ● Prototype Online
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <p class="eyebrow">
+                    SMART MARKET DECISION SUPPORT
+                </p>
+
+                <h2>
+                    Sell smarter.<br>
+                    <span>Know your market.</span>
+                </h2>
+
+                <p>
+                    KisanLink compares market prices, demand,
+                    trends, transport costs and buyer reliability
+                    to recommend where your crop may get the
+                    best value.
+                </p>
+
+            </div>
+
+
+            <div class="farmer-card">
+
+                <h3>🌾 Farmer Details</h3>
+
+                <label for="crop">
+                    Crop
+                </label>
+
+                <select id="crop">
+
+                    <option value="Tomato">
+                        Tomato
+                    </option>
+
+                    <option value="Potato">
+                        Potato
+                    </option>
+
+                    <option value="Onion">
+                        Onion
+                    </option>
+
+                    <option value="Wheat">
+                        Wheat
+                    </option>
+
+                </select>
+
+
+                <label for="quantity">
+                    Quantity (kg)
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    value="1000"
+                    min="1"
+                >
+
+
+                <label for="location">
+                    Your Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="e.g. Ghaziabad"
+                    value="Ghaziabad"
+                >
+
+
+                <button
+                    id="recommendButton"
+                    onclick="getRecommendation()"
+                >
+                    FIND BEST MARKET →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="loading"
+            class="loading hidden"
+        >
+            <div class="spinner"></div>
+            <p>
+                Analysing market conditions...
+            </p>
+        </section>
+
+
+        <section
+            id="results"
+            class="results hidden"
+        >
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">
+                        KisanLink RECOMMENDATION
+                    </p>
+
+                    <h2>
+                        Best market for your crop
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div
+                id="bestMarket"
+                class="best-market"
+            >
+            </div>
+
+
+            <div class="market-section">
+
+                <h3>
+                    Market Comparison
+                </h3>
+
+                <div
+                    id="marketCards"
+                    class="market-grid"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="error"
+            class="error hidden"
+        >
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            KisanLink • Prototype for Smart India Hackathon
+        </p>
+
+        <p>
+            Data shown is prototype/demo data.
+        </p>
+
+    </footer>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
